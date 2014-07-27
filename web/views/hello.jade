@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
+    script(src="http://code.jquery.com/jquery-2.1.1.min.js")
+    script(type="text/javascript", src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+  body
+    #container.col-md-10.col-md-offset-1
+      h1 Interval Shots
+      table
+        for hh in hhs
+          tr(width="10%")
+            for yymmdd in sevenDays
+              td 
+                img(src="/static/#{yymmdd}_#{hh}.gif", width="100%")
