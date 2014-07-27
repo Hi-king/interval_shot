@@ -7,7 +7,7 @@ app.use '/static', express.static __dirname + '/../'
 
 app.get '/', (req, res) ->
     today = new Date
-    lastSevenDays = (daysAgo(today, i) for i in  [0...7]).map(getYymmdd)
+    lastSevenDays = (daysAgo(today, i) for i in  [0...7]).map(getYymmdd).reverse()
     hhs = [0...24].map (x)->pudding x, 2
     console.log hhs
     res.render 'hello.jade', {
